@@ -6,7 +6,7 @@ class ChatGptService
   WORD_COUNT = 500
 
   def initialize
-    @openai = OpenAI::Client.new(access_token: "api_token")
+    @openai = OpenAI::Client.new(access_token: ENV['CHAT_GPT_TOKEN'])
   end
 
   def chat
